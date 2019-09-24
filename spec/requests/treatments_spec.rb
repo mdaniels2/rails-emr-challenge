@@ -39,7 +39,7 @@ RSpec.describe 'Treatments API', type: :request do
       before do
         post "/patient/#{patient_id}/treatments", params: { dosage: "#{Faker::Measurement.metric_weight}/day",
                                                             start_date: 2.weeks.ago,
-                                                            foo: 'bar'}
+                                                            foo: 'bar' }
       end
 
       it 'returns a validation error' do

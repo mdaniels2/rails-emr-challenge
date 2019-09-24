@@ -8,7 +8,7 @@ class TreatmentsController < ApplicationController
   def create
     set_patient
     @treatment = @patient.treatments.create!(treatment_params)
-    json_response({id: @treatment.id }, :created)
+    json_response({ id: @treatment.id }, :created)
   end
 
   private

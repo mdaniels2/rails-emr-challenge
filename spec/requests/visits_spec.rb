@@ -22,7 +22,7 @@ RSpec.describe 'Visits API', type: :request do
       before do
         post "/patient/#{patient_id}/visits", params: { provider_id: visits.first.provider_id,
                                                         notes: Faker::Lorem.sentence(word_count: 10) }
-        end
+      end
 
       it 'returns the id of the created visits' do
         expect(json).to_not be_empty

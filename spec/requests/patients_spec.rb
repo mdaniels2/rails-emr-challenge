@@ -71,7 +71,6 @@ RSpec.describe 'Patients API', type: :request do
 
     it 'returns an appropriate error code' do
       expect(response.body).to match(/Validation failed: Email can't be blank/)
-
     end
 
     it 'returns a status code 422' do
