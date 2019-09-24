@@ -35,18 +35,16 @@ RSpec.describe 'Visits API', type: :request do
     end
 
     context 'when provider_id is not provided' do
-      context 'when provider_id is not provided' do
-        before do
-          post "/patient/#{patient_id}/visits", params: { notes: Faker::Lorem.sentence(word_count: 10) }
-        end
+      before do
+        post "/patient/#{patient_id}/visits", params: { notes: Faker::Lorem.sentence(word_count: 10) }
+      end
 
-        it 'returns a validation error' do
-          expect(response.body).to match(/Validation failed: Provider must exist/)
-        end
+      it 'returns a validation error' do
+        expect(response.body).to match(/Validation failed: Provider must exist/)
+      end
 
-        it 'returns a status code 422' do
-          expect(response).to have_http_status(422)
-        end
+      it 'returns a status code 422' do
+        expect(response).to have_http_status(422)
       end
     end
   end
