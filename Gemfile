@@ -5,7 +5,7 @@ ruby '2.5.3'
 
 gem 'rails', '~> 6.0.0'
 gem 'pg', '~> 1.1', '>= 1.1.4'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
